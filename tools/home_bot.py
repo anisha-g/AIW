@@ -4,16 +4,22 @@ import os
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain.chains import LLMChain
-
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 
 # Load environment variables from .env file
 load_dotenv()
 
 # Get the API key from environment variables
-Groq_api_key = os.getenv("Groq_api_key")
+# Groq_api_key = os.getenv("Groq_api_key")
 
-chat = ChatGroq(temperature=0, model_name="mixtral-8x7b-32768")
+
+# chat = ChatGroq(temperature=0, model_name="mixtral-8x7b-32768")
+   
+#----------------------------------------------------------  using gemini ---------------------------------------------------------------------------------
+   
+Google_api_key=  os.getenv("Gemini_key")  
+chat = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0, google_api_key= Google_api_key)
 
 
 personal_name = "Anisha"
