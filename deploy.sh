@@ -39,7 +39,7 @@ server {
 
     location / {
         include proxy_params;
-        proxy_pass http://unix:/var/www/langchain-app/myapp.sock;
+        proxy_pass http://unix:/var/www/awi_backend/myapp.sock;
     }
 }
 EOF'
