@@ -1,4 +1,5 @@
 #!/bin/bash
+export DEBIAN_FRONTEND=noninteractive
 
 echo "deleting old app"
 sudo rm -rf /var/www/
